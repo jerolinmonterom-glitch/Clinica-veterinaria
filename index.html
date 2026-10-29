@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Montero Vet - Clínica Veterinaria, Farmacia y Pet Shop en Santo Domingo, República Dominicana.">
+    <title>Montero Vet | Clínica Veterinaria & Pet Shop</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/616/616408.png" type="image/png">
+    
+    <!-- CDNs Oficiales -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- BARRA SUPERIOR DE PROMOCIÓN -->
+    <div class="top-promo-bar text-center py-2 px-3 fw-semibold">
+        🔥 <strong>¡OFERTA ESPECIAL MONTERO VET!</strong> 20% de descuento en Alimentos y Antiparasitarios. Termina en: 
+        <span id="countdown" class="badge bg-light text-dark ms-2 fw-bold px-2 py-1">05h 42m 18s</span>
+    </div>
+
+    <!-- MENÚ DE NAVEGACIÓN -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio">
+                <div class="brand-icon-box shadow">
+                    <i class="fa-solid fa-paw text-white"></i>
+                </div>
+                <span class="fw-extrabold fs-4 text-white">MONTERO<span class="text-accent">VET</span></span>
+            </a>
+            
+            <div class="d-flex align-items-center gap-3 order-lg-last">
+                <button class="btn btn-cart-badge position-relative text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">
+                    <i class="fa-solid fa-cart-shopping fa-lg"></i>
+                    <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-accent shadow-sm">0</span>
+                </button>
+                <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2 text-center py-3 py-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tienda">Pet Shop & Farmacia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#equipo">Especialistas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonios">Reseñas</a></li>
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn btn-accent btn-sm px-4 py-2 rounded-pill fw-bold text-white shadow-sm" href="#contacto">Urgencias 24/7</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECCIÓN INICIO (HERO BANNER) -->
+    <section id="inicio" class="hero-section d-flex align-items-center">
+        <div class="hero-overlay"></div>
+        <div class="container position-relative z-2 text-white py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <span class="badge bg-accent-soft text-accent px-3 py-2 rounded-pill mb-3 fw-bold tracking-wider text-uppercase border border-warning shadow-sm">
+                        ✨ Clínica Veterinaria en Santo Domingo
+                    </span>
+                    <h1 class="display-3 fw-extrabold mb-4 hero-title">Pasión y Tecnología para el Cuidado de tus Mascotas 🐾</h1>
+                    <p class="lead mb-5 text-light fs-5 mx-auto" style="max-width: 700px;">
+                        Atención médica especializada, farmacia veterinaria y alimentos de máxima calidad para perros y gatos.
+                    </p>
+                    <div class="d-flex justify-content-center gap-3 flex-wrap">
+                        <a href="#contacto" class="btn btn-accent btn-lg px-5 py-3 fw-bold rounded-pill text-white shadow-lg btn-hover-grow">
+                            <i class="fa-solid fa-calendar-check me-2"></i> Agendar Cita
+                        </a>
+                        <a href="#tienda" class="btn btn-glass btn-lg px-5 py-3 fw-bold rounded-pill text-white shadow-lg btn-hover-grow">
+                            <i class="fa-solid fa-store me-2"></i> Ver Tienda & Alimentos
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN SERVICIOS -->
+    <section id="servicios" class="py-6 bg-light-custom">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <span class="text-secondary-custom fw-bold text-uppercase small">Especialidades Médicas</span>
+                <h2 class="section-title mt-1">Nuestros Servicios 🩺</h2>
+                <p class="text-muted mt-2">Instalaciones modernas equipadas para proteger la salud de tu compañero.</p>
+            </div>
+            <div class="row g-4">
+                <!-- Servicio 1 -->
+                <div class="col-md-4">
+                    <div class="card card-custom h-100 border-0 shadow-hover">
+                        <div class="position-relative overflow-hidden">
+                            <img src="https://universumk9.com/wp-content/uploads/2024/02/consulta.webp" class="card-img-top img-zoom" alt="Consulta General">
+                            <div class="card-badge-floating bg-secondary-custom text-white">Prevención</div>
+                        </div>
+                        <div class="card-body text-center p-4 bg-white">
+                            <div class="icon-circle mb-3 mx-auto shadow-sm">
+                                <i class="fa-solid fa-stethoscope fa-2xl text-secondary-custom"></i>
+                            </div>
+                            <h3 class="h4 card-title fw-bold text-dark">Consulta General</h3>
+                            <p class="card-text text-muted small mt-2">Chequeos preventivos, planes de vacunación, desparasitación y diagnóstico oportuno.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Servicio 2 -->
+                <div class="col-md-4">
+                    <div class="card card-custom h-100 border-0 shadow-hover">
+                        <div class="position-relative overflow-hidden">
+                            <img src="https://www.clinicaveterinariaejea.com/wp-content/uploads/2014/05/clinica_veterinaria_ejea_132-1024x682.jpeg" class="card-img-top img-zoom" alt="Cirugías">
+                            <div class="card-badge-floating bg-accent text-white">Quirófano A+</div>
+                        </div>
+                        <div class="card-body text-center p-4 bg-white">
+                            <div class="icon-circle mb-3 mx-auto shadow-sm">
+                                <i class="fa-solid fa-user-nurse fa-2xl text-secondary-custom"></i>
+                            </div>
+                            <h3 class="h4 card-title fw-bold text-dark">Cirugías Especializadas</h3>
+                            <p class="card-text text-muted small mt-2">Quirófanos esterilizados con monitoreo anestésico para cirugías complejas y sencillas.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Servicio 3 -->
+                <div class="col-md-4">
+                    <div class="card card-custom h-100 border-0 shadow-hover">
+                        <div class="position-relative overflow-hidden">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKL25Ge1iBXpQpDcXhX44HZE2VQsfixJJfkTXjn0AeSQ&s=10" class="card-img-top img-zoom" alt="Peluquería">
+                            <div class="card-badge-floating bg-primary-custom text-white">Spa & Estética</div>
+                        </div>
+                        <div class="card-body text-center p-4 bg-white">
+                            <div class="icon-circle mb-3 mx-auto shadow-sm">
+                                <i class="fa-solid fa-scissors fa-2xl text-secondary-custom"></i>
+                            </div>
+                            <h3 class="h4 card-title fw-bold text-dark">Peluquería y Spa</h3>
+                            <p class="card-text text-muted small mt-2">Baños medicinales dermatológicos, cortes por raza, limpieza de oídos y corte de uñas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN PET SHOP & FARMACIA -->
+    <section id="tienda" class="py-6 bg-white">
+        <div class="container py-4">
+            <div class="text-center mb-4">
+                <span class="text-secondary-custom fw-bold text-uppercase small">Tienda Online</span>
+                <h2 class="section-title mt-1">Pet Shop & Farmacia Montero 🦴💊</h2>
+                <p class="text-muted mt-2">Alimentos premium, medicinas recetadas y accesorios con envío a domicilio.</p>
+            </div>
+
+            <!-- Filtros -->
+            <div class="d-flex justify-content-center gap-2 mb-5 flex-wrap">
+                <button class="btn btn-filter active filter-btn px-4 py-2 rounded-pill fw-semibold shadow-sm" data-filter="all">✨ Todos</button>
+                <button class="btn btn-filter filter-btn px-4 py-2 rounded-pill fw-semibold shadow-sm" data-filter="comida">🍲 Alimentos</button>
+                <button class="btn btn-filter filter-btn px-4 py-2 rounded-pill fw-semibold shadow-sm" data-filter="medicina">💊 Medicamentos</button>
+                <button class="btn btn-filter filter-btn px-4 py-2 rounded-pill fw-semibold shadow-sm" data-filter="accesorios">🧸 Accesorios</button>
+            </div>
+
+            <!-- Productos -->
+            <div class="row g-4" id="productGrid">
+                <!-- Producto 1 -->
+                <div class="col-md-6 col-lg-3 product-item" data-category="comida">
+                    <div class="card product-card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                        <div class="position-relative">
+                            <span class="badge bg-danger position-absolute top-0 start-0 m-3 px-3 py-2 rounded-pill shadow-sm">Más Vendido</span>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQPGHxB2waY7bpMQ3cUDsRuq6Hgdzg0XsTp-giu1CJYQ&s=10" class="card-img-top product-img" alt="Alimento Canino">
+                        </div>
+                        <div class="card-body d-flex flex-column p-4 text-center bg-white">
+                            <h4 class="h6 fw-bold text-dark mb-1">Alimento Canino Premium 15kg</h4>
+                            <p class="small text-muted mb-3">Nutrición avanzada para perros adultos.</p>
+                            <div class="mt-auto">
+                                <div class="h5 fw-extrabold text-success mb-3">RD$ 2,850</div>
+                                <button class="btn btn-primary-custom w-100 py-2 rounded-pill fw-bold btn-add-cart shadow-sm" data-name="Alimento Canino Premium 15kg" data-price="2850">
+                                    <i class="fa-solid fa-cart-plus me-1"></i> Agregar al Carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 2 -->
+                <div class="col-md-6 col-lg-3 product-item" data-category="medicina">
+                    <div class="card product-card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                        <div class="position-relative">
+                            <span class="badge bg-primary position-absolute top-0 start-0 m-3 px-3 py-2 rounded-pill shadow-sm">Recetado</span>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8nM_DEq9pxaZom5ixLcxi7BY5W4DnM1uv6hnzliqS0A&s=10" class="card-img-top product-img" alt="Antiparasitario">
+                        </div>
+                        <div class="card-body d-flex flex-column p-4 text-center bg-white">
+                            <h4 class="h6 fw-bold text-dark mb-1">Antiparasitario Oral Simparica</h4>
+                            <p class="small text-muted mb-3">Protección eficaz contra pulgas y garrapatas.</p>
+                            <div class="mt-auto">
+                                <div class="h5 fw-extrabold text-success mb-3">RD$ 1,200</div>
+                                <button class="btn btn-primary-custom w-100 py-2 rounded-pill fw-bold btn-add-cart shadow-sm" data-name="Antiparasitario Oral Simparica" data-price="1200">
+                                    <i class="fa-solid fa-cart-plus me-1"></i> Agregar al Carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 3 -->
+                <div class="col-md-6 col-lg-3 product-item" data-category="comida">
+                    <div class="card product-card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                        <div class="position-relative">
+                            <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3 px-3 py-2 rounded-pill shadow-sm">Gatos</span>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQokj1HVIOtxiGAWwEE1zgEy7_2FMI57-z9Kp8XBwrE6g&s=10" class="card-img-top product-img" alt="Alimento Gatos">
+                        </div>
+                        <div class="card-body d-flex flex-column p-4 text-center bg-white">
+                            <h4 class="h6 fw-bold text-dark mb-1">Alimento Felino Gourmet 7kg</h4>
+                            <p class="small text-muted mb-3">Fórmula especializada para salud renal.</p>
+                            <div class="mt-auto">
+                                <div class="h5 fw-extrabold text-success mb-3">RD$ 1,950</div>
+                                <button class="btn btn-primary-custom w-100 py-2 rounded-pill fw-bold btn-add-cart shadow-sm" data-name="Alimento Felino Gourmet 7kg" data-price="1950">
+                                    <i class="fa-solid fa-cart-plus me-1"></i> Agregar al Carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 4 -->
+                <div class="col-md-6 col-lg-3 product-item" data-category="accesorios">
+                    <div class="card product-card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                        <div class="position-relative">
+                            <span class="badge bg-info text-dark position-absolute top-0 start-0 m-3 px-3 py-2 rounded-pill shadow-sm">Confort</span>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9JYcQC4HkhsWB2eMyjCK6yTFaKke3de10qCAPNVKlkw&s" class="card-img-top product-img" alt="Cama Mascotas">
+                        </div>
+                        <div class="card-body d-flex flex-column p-4 text-center bg-white">
+                            <h4 class="h6 fw-bold text-dark mb-1">Cama Ortopédica Talla L</h4>
+                            <p class="small text-muted mb-3">Espuma viscoelástica anti-presión.</p>
+                            <div class="mt-auto">
+                                <div class="h5 fw-extrabold text-success mb-3">RD$ 3,400</div>
+                                <button class="btn btn-primary-custom w-100 py-2 rounded-pill fw-bold btn-add-cart shadow-sm" data-name="Cama Ortopédica Talla L" data-price="3400">
+                                    <i class="fa-solid fa-cart-plus me-1"></i> Agregar al Carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OFFCANVAS CARRITO -->
+    <div class="offcanvas offcanvas-end rounded-start-4 shadow-lg" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+        <div class="offcanvas-header bg-primary-custom text-white py-4 px-4">
+            <h5 class="offcanvas-title fw-bold" id="cartOffcanvasLabel"><i class="fa-solid fa-cart-shopping me-2 text-accent"></i> Carrito Montero Vet</h5>
+            <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column p-4">
+            <div id="cartItemsContainer" class="flex-grow-1 overflow-auto mb-3 pe-2">
+                <p class="text-center text-muted my-5">Tu carrito está vacío actualmente.</p>
+            </div>
+            <div class="border-top pt-3 bg-white">
+                <div class="d-flex justify-content-between h5 fw-bold mb-3">
+                    <span class="text-dark">Total estimado:</span>
+                    <span id="cartTotal" class="text-success">RD$ 0</span>
+                </div>
+                <button id="checkoutBtn" class="btn btn-success w-100 py-3 rounded-pill fw-bold shadow disabled">
+                    <i class="fa-brands fa-whatsapp fa-lg me-2"></i> Enviar Pedido por WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECCIÓN EQUIPO MÉDICO -->
+    <section id="equipo" class="py-6 bg-light-custom">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <span class="text-secondary-custom fw-bold text-uppercase small">Talento Humano</span>
+                <h2 class="section-title mt-1">Especialistas Certificados 👨‍⚕️👩‍⚕️</h2>
+                <p class="text-muted mt-2">Profesionales apasionados por la medicina veterinaria y el cuidado animal.</p>
+            </div>
+            <div class="row g-4">
+                <!-- Dra. Jhomeirys -->
+                <div class="col-md-4 text-center">
+                    <div class="team-card p-4 rounded-4 bg-white shadow-sm h-100">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF6wRbsRY9RIL0iPkK4vwnPiIBeTt1fO1lUi3T6hRAsw&s=10" class="rounded-circle team-img mb-3 shadow" alt="Dra. Ana López">
+                        <h3 class="h4 fw-bold text-dark mb-1">Dra. Jhomeirys Montero</h3>
+                        <span class="badge bg-secondary-custom text-white mb-3 px-3 py-1 rounded-pill">Medicina General & Dermatología</span>
+                        <p class="text-muted small">Más de 10 años preservando la salud cutánea y bienestar nutricional de perros y gatos.</p>
+                    </div>
+                </div>
+                <!-- Dra. Adriana -->
+                <div class="col-md-4 text-center">
+                    <div class="team-card p-4 rounded-4 bg-white shadow-sm h-100">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpMwWql_fI-4Whmo2Iy3BtwQzIWwn9E3ClcTgzrViL_Q&s=10" class="rounded-circle team-img mb-3 shadow" alt="Dr. Carlos Méndez">
+                        <h3 class="h4 fw-bold text-dark mb-1">Dr. Carlos Morillo</h3>
+                        <span class="badge bg-secondary-custom text-white mb-3 px-3 py-1 rounded-pill">Cirujano Ortopedista</span>
+                        <p class="text-muted small">Especialista en intervenciones quirúrgicas complejas, traumatología y rehabilitación.</p>
+                    </div>
+                </div>
+                <!-- Dra. Laura -->
+                <div class="col-md-4 text-center">
+                    <div class="team-card p-4 rounded-4 bg-white shadow-sm h-100">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8wPAAwM8hIhGrVcHbPqZHuVRDp4Tulai8oKk3HsFNgg&s" class="rounded-circle team-img mb-3 shadow" alt="Dra. Laura Gómez">
+                        <h3 class="h4 fw-bold text-dark mb-1">Dra. Laura Gómez</h3>
+                        <span class="badge bg-secondary-custom text-white mb-3 px-3 py-1 rounded-pill">Odontología y Grooming</span>
+                        <p class="text-muted small">Especializada en profilaxis dental ultrasónica y estética profesional para mascotas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN TESTIMONIOS -->
+    <section id="testimonios" class="py-6 bg-white">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <span class="text-secondary-custom fw-bold text-uppercase small">Testimonios Reales</span>
+                <h2 class="section-title mt-1">Lo que dicen nuestros clientes ⭐💬</h2>
+                <p class="text-muted mt-2">La felicidad de nuestros pacientes y dueños es nuestra mejor recompensa.</p>
+            </div>
+
+            <div class="carousel-container position-relative px-md-5">
+                <button class="carousel-control-prev custom-carousel-btn shadow-sm" type="button" data-bs-target="#carouselTestimonios" data-bs-slide="prev">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <div id="carouselTestimonios" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <!-- Vista 1 -->
+                        <div class="carousel-item active">
+                            <div class="row g-4">
+                                <div class="col-12 col-sm-6 col-lg-3">
+                                    <div class="card rainbow-card h-100 p-4 text-center shadow-sm rounded-4">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPoO84CtDqjMLG2nq8PVSuHEheISBo5TYNAQoQeY-6oJKnonhMhftFW_Y&s=10" class="avatar-heartbeat rounded-circle mx-auto mb-3 shadow" alt="Cliente 1">
+                                        <h4 class="h6 fw-bold text-dark">María Fernández 🐶</h4>
+                                        <p class="small text-muted mb-3">"Excelente atención en Montero Vet con mi perrito Toby. ¡Muy profesionales!"</p>
+                                        <div class="text-warning small mt-auto"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-3">
+                                    <div class="card rainbow-card h-100 p-4 text-center shadow-sm rounded-4">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBvq26wOg0Zi4H-gLYQKJsHN1IhEoteb3j2cn9u__ifA&s=10" class="avatar-heartbeat rounded-circle mx-auto mb-3 shadow" alt="Cliente 2">
+                                        <h4 class="h6 fw-bold text-dark">José Rodríguez 🐱</h4>
+                                        <p class="small text-muted mb-3">"La cirugía de mi gata fue un éxito total. El quirófano es impecable."</p>
+                                        <div class="text-warning small mt-auto"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-3">
+                                    <div class="card rainbow-card h-100 p-4 text-center shadow-sm rounded-4">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDcghROgMMKI8SMucUaq8WWYu3LDUKwh9TaFdEx3B7bw&s=10" class="avatar-heartbeat rounded-circle mx-auto mb-3 shadow" alt="Cliente 3">
+                                        <h4 class="h6 fw-bold text-dark">Camila Santos 🐩</h4>
+                                        <p class="small text-muted mb-3">"El servicio de spa dejó a Luna hermosa y con un aroma divino."</p>
+                                        <div class="text-warning small mt-auto"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-3">
+                                    <div class="card rainbow-card h-100 p-4 text-center shadow-sm rounded-4">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv_xfPXVRq4yudQnphTOzMIeajjn0aRpv85fcL-hIv_w&s=10" class="avatar-heartbeat rounded-circle mx-auto mb-3 shadow" alt="Cliente 4">
+                                        <h4 class="h6 fw-bold text-dark">Luis Peralta 🐕</h4>
+                                        <p class="small text-muted mb-3">"Tienen los mejores alimentos importados para perros. 10/10."</p>
+                                        <div class="text-warning small mt-auto"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Vista 2 -->
+                        <div class="carousel-item">
+                            <div class="row g-4">
+                                <div class="col-12 col-sm-6 col-lg-3">
+                                    <div class="card rainbow-card h-100 p-4 text-center shadow-sm rounded-4">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgij2RKOBjjZ7lV6Krt_LOA7id92AQLtxGMwvctIvMoA&s=10" class="avatar-heartbeat rounded-circle mx-auto mb-3 shadow" alt="Cliente 5">
+                                        <h4 class="h6 fw-bold text-dark">Elena Gómez 🐈</h4>
+                                        <p class="small text-muted mb-3">"Compré los medicamentos de mi gato aquí con entrega inmediata."</p>
+                                        <div class="text-warning small mt-auto"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-3">
+                                    <div class="card rainbow-card h-100 p-4 text-center shadow-sm rounded-4">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7shsQOb_QdlGw8tioTykU-5EX-ZJPz5pPlBofx52DYg&s=10" class="avatar-heartbeat rounded-circle mx-auto mb-3 shadow" alt="Cliente 6">
+                                        <h4 class="h6 fw-bold text-dark">Rafael Cruz 🦜</h4>
+                                        <p class="small text-muted mb-3">"Muy agradecido con el Dr. Carlos por salvarle la patita a Max."</p>
+                                        <div class="text-warning small mt-auto"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-3">
+                                    <div class="card rainbow-card h-100 p-4 text-center shadow-sm rounded-4">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdldGHYKjUC3Sx41bzCBum0242qkvJtmOMZXQxuVQBSA&s=10" class="avatar-heartbeat rounded-circle mx-auto mb-3 shadow" alt="Cliente 7">
+                                        <h4 class="h6 fw-bold text-dark">Patricia Díaz 🦮</h4>
+                                        <p class="small text-muted mb-3">"Precios súper justos y un cariño genuino por cada animal."</p>
+                                        <div class="text-warning small mt-auto"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-3">
+                                    <div class="card rainbow-card h-100 p-4 text-center shadow-sm rounded-4">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5KI4Aj16SCUJgJlYyMjwdCOuScDW0lSnCVPeApZxUQQ&s=10" class="avatar-heartbeat rounded-circle mx-auto mb-3 shadow" alt="Cliente 8">
+                                        <h4 class="h6 fw-bold text-dark">Gabriel Vargas 🐾</h4>
+                                        <p class="small text-muted mb-3">"La Dra. Ana es un amor de persona. Rocky la adora."</p>
+                                        <div class="text-warning small mt-auto"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Vista 3 -->
+                        <div class="carousel-item">
+                            <div class="row g-4 justify-content-center">
+                                <div class="col-12 col-sm-6 col-lg-3">
+                                    <div class="card rainbow-card h-100 p-4 text-center shadow-sm rounded-4">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGdNZJHDD-xP3tRAzE2G2RdfFWdBDIAX6bBxg5WXxGLA&s=10" class="avatar-heartbeat rounded-circle mx-auto mb-3 shadow" alt="Cliente 9">
+                                        <h4 class="h6 fw-bold text-dark">Sofia Martinez 🐰</h4>
+                                        <p class="small text-muted mb-3">"Tratan a los conejitos con una delicadeza y respeto increíble."</p>
+                                        <div class="text-warning small mt-auto"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-3">
+                                    <div class="card rainbow-card h-100 p-4 text-center shadow-sm rounded-4">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA4JRlVE8lMKemMGXeunzB-WLJS_ocFf5XJH-olBT-Rw&s=10" class="avatar-heartbeat rounded-circle mx-auto mb-3 shadow" alt="Cliente 10">
+                                        <h4 class="h6 fw-bold text-dark">David Castillo 🐶</h4>
+                                        <p class="small text-muted mb-3">"Mi veterinaria de confianza en Santo Domingo desde hace años."</p>
+                                        <div class="text-warning small mt-auto"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-next custom-carousel-btn shadow-sm" type="button" data-bs-target="#carouselTestimonios" data-bs-slide="next">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CONTACTO -->
+    <section id="contacto" class="py-6 bg-light-custom">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <span class="text-secondary-custom fw-bold text-uppercase small">Estamos Cerca de Ti</span>
+                <h2 class="section-title mt-1">Contáctanos 📞</h2>
+                <p class="text-muted mt-2">Atención de urgencias 24/7 y citas programadas en Santo Domingo, R.D.</p>
+            </div>
+
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-5">
+                    <div class="contact-card p-5 rounded-4 shadow-lg bg-primary-custom text-white text-center position-relative overflow-hidden">
+                        <div class="position-relative z-2">
+                            <div class="icon-circle bg-white text-primary-custom mb-4 mx-auto shadow">
+                                <i class="fa-solid fa-phone-volume fa-2x"></i>
+                            </div>
+                            <h3 class="h5 fw-semibold text-light">Línea Directa Urgencias</h3>
+                            <p class="display-5 fw-extrabold text-accent my-3">(809) 555-0199</p>
+                            <p class="small text-light mb-4 opacity-75">Av. Winston Churchill #101, Piantini, Santo Domingo, R.D.</p>
+                            <a href="https://wa.me/18095550199?text=Hola%20Montero%20Vet,%20necesito%20asistencia%20veterinaria." target="_blank" class="btn btn-success btn-lg w-100 py-3 rounded-pill fw-bold shadow">
+                                <i class="fa-brands fa-whatsapp fa-lg me-2"></i> Chatear por WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <form id="contactForm" class="p-5 bg-white rounded-4 shadow-sm border border-light" action="mailto:contacto@monterovet.com.do" method="POST" enctype="text/plain">
+                        <h3 class="h4 fw-bold mb-4 text-primary-custom">Envíanos un Mensaje 📩</h3>
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label fw-semibold text-dark">Nombre Completo</label>
+                            <input type="text" class="form-control form-control-lg bg-light border-0" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label fw-semibold text-dark">Correo Electrónico</label>
+                            <input type="email" class="form-control form-control-lg bg-light border-0" id="email" name="email" placeholder="correo@ejemplo.com" required>
+                            <div class="invalid-feedback">Por favor introduce un correo electrónico válido.</div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="mensaje" class="form-label fw-semibold text-dark">Motivo de Consulta o Mensaje</label>
+                            <textarea class="form-control form-control-lg bg-light border-0" id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos sobre tu mascota o tu pedido..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary-custom w-100 py-3 rounded-pill fw-bold shadow">
+                            <i class="fa-solid fa-paper-plane me-2"></i> Enviar Mensaje a Montero Vet
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL CONFIRMACIÓN -->
+    <div class="modal fade" id="confirmModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center p-4 rounded-4 shadow-lg border-0">
+                <div class="modal-body py-4">
+                    <div class="success-icon-box mb-3 mx-auto">
+                        <i class="fa-solid fa-circle-check text-success display-1"></i>
+                    </div>
+                    <h3 class="fw-bold text-dark">¡Mensaje Recibido! 🎉</h3>
+                    <p class="text-muted mt-2">Hemos detectado la apertura de tu cliente de correo. En Montero Vet te atenderemos de inmediato.</p>
+                    <button type="button" class="btn btn-primary-custom px-5 py-2 rounded-pill fw-bold text-white mt-3" data-bs-dismiss="modal">Entendido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOTÓN FLOTANTE WHATSAPP -->
+    <a href="https://wa.me/18095550199?text=Hola%20Montero%20Vet,%20deseo%20consultar%20sobre%20sus%20servicios." class="whatsapp-float shadow-lg d-flex align-items-center justify-content-center" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- FOOTER -->
+    <footer class="bg-primary-custom text-white pt-6 pb-4 border-top border-warning">
+        <div class="container">
+            <div class="row g-4 text-center text-md-start">
+                <div class="col-md-4">
+                    <h4 class="h5 fw-bold text-accent mb-3">Montero Vet 🐾</h4>
+                    <p class="small text-light opacity-75">Clínica veterinaria, farmacia especializada y pet shop de confianza.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="h5 fw-bold text-accent mb-3">Ubicación y Horarios 📍</h4>
+                    <p class="small mb-2 opacity-75"><i class="fa-solid fa-location-dot me-2 text-accent"></i> Av. Winston Churchill #101, Santo Domingo, R.D.</p>
+                    <p class="small mb-2 opacity-75"><i class="fa-solid fa-clock me-2 text-accent"></i> Lun - Sáb: 8:00 AM - 8:00 PM</p>
+                    <p class="small opacity-75"><i class="fa-solid fa-truck-medical me-2 text-accent"></i> Urgencias: 24 Horas / 365 Días</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h4 class="h5 fw-bold text-accent mb-3">Síguenos 🌐</h4>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="#" class="social-icon"><i class="fa-brands fa-facebook fa-xl"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-instagram fa-xl"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-twitter fa-xl"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-linkedin fa-xl"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-youtube fa-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 border-secondary opacity-25">
+            <p class="text-center small mb-0 text-light opacity-75">&copy; 2026 Montero Vet. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html
